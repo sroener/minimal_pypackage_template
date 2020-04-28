@@ -10,7 +10,7 @@ import click
 
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 @click.command()
-def main(args=None):
+def cli(args=None):
     """Console script for {{cookiecutter.project_slug}}."""
     click.echo("Replace this message by putting your code into "
                "{{cookiecutter.project_slug}}.cli.main")
@@ -18,7 +18,7 @@ def main(args=None):
     return 0
 {%- endif %}
 {%- if cookiecutter.command_line_interface|lower == 'argparse' %}
-def main():
+def cli():
     """Console script for {{cookiecutter.project_slug}}."""
     parser = argparse.ArgumentParser()
     parser.add_argument('_', nargs='*')
@@ -32,4 +32,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())  # pragma: no cover
+    sys.exit(cli())  # pragma: no cover
