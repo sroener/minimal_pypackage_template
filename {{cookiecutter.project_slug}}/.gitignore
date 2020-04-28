@@ -130,6 +130,3 @@ dmypy.json
 
 # VS code project settings
 .vscode/
-
-# project related To-Do list
-TODO.md
